@@ -53,7 +53,7 @@ public class Driver {
 
                     try {
                         // assign your grid server address
-                        String gridAddress = "18.212.170.246/";
+                        String gridAddress = "18.212.170.246";
                         URL url = new URL("http://" + gridAddress + ":4444/wd/hub");
                         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
                         desiredCapabilities.setBrowserName("chrome");
