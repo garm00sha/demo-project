@@ -38,8 +38,7 @@ public class Driver {
                     try {
                         // assign your grid server address
 
-
-                        String gridAddress = "52.90.101.317";
+                        String gridAddress = "18.212.170.246";
                         URL url = new URL("http://" + gridAddress + ":4444/wd/hub");
                         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
                         desiredCapabilities.setBrowserName("chrome");
@@ -56,16 +55,13 @@ public class Driver {
                         String gridAddress = "18.212.170.246";
                         URL url = new URL("http://" + gridAddress + ":4444/wd/hub");
                         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
-                        desiredCapabilities.setBrowserName("chrome");
+                        desiredCapabilities.setBrowserName("firefox");
                         driver = new RemoteWebDriver(url, desiredCapabilities);
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
                     break;
-                case "chrome":
-                    WebDriverManager.chromedriver().setup();
-                    driver = new ChromeDriver();
-                    break;
+
                 case "chrome-headless":
                     WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver(new ChromeOptions().setHeadless(true));
